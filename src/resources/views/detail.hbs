@@ -1,0 +1,30 @@
+<div class="container bootdey">
+    <div class="col-md-12">
+        <section class="panel">
+            {{#each coffee}}
+            <div class="panel-body d-flex flex-row">
+                <div class="col-md-6">
+                    <div class="pro-img-details">
+                        <img src="/img/coffeeBest/{{this.imageId}}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="pro-d-title">
+                        <a href="#" class="">
+                            {{this.name}}
+                        </a>
+                    </h4>
+                    <p>
+                        {{this.description}}
+                    </p>
+                    <div class="m-bot15"> <strong>Price : </strong> <span class="pro-price"> ${{this.price}}.00</span></div>
+                    <p>
+                        <a href="/">
+                            <button class="btn btn-round btn-danger" type="button">Quay lại</button>
+                        </a>
+                </div>
+            </div>
+            {{/each}}
+        </section>
+    </div>
+</div>

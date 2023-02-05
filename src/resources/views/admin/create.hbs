@@ -1,0 +1,33 @@
+<div class="container" style="margin-top: 40px; margin-bottom: 40px;">
+    <form method="POST" action="/coffee/create" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Tên coffee</label>
+            <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                placeholder="Nhập tên sản phẩm">
+        </div>
+        <div class="form-group">
+            <label for="description">Mô tả</label>
+            <input name="description" type="text" class="form-control" id="description" aria-describedby="emailHelp"
+                placeholder="Nhập mô tả sản phẩm">
+        </div>
+        <div class="form-group">
+            <label for="country">Xuất xứ</label>
+            <input name="country" type="text" class="form-control" id="country" aria-describedby="emailHelp"
+                placeholder="Nhập mô tả sản phẩm">
+        </div>
+        <div class="form-group">
+            <label for="mass">Khối lượng / 1 bịch</label>
+            <input name="mass" type="text" class="form-control" id="mass" aria-describedby="emailHelp"
+                placeholder="Nhập khối lượng sản phẩm">
+        </div>
+        <div class="form-group">
+            <label for="price">Giá bán</label>
+            <input name="price" type="text" class="form-control" id="price" placeholder="Nhập giá bán">
+        </div>
+        <div class="form-group">
+            <label for="imageId">Ảnh sản phẩm</label>
+            <input name="imageId" type="file" class="form-control-file" id="imageId">
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+    </form>
+</div>

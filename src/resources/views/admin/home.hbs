@@ -1,0 +1,51 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Admin</li>
+  </ol>
+</nav>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Hình ảnh</th>
+      <th scope="col">Khối lượng</th>
+      <th scope="col">Xuất sứ</th>
+      <th scope="col">Giá</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each coffee}}
+    <tr>
+      <th scope="row">{{sum @index 1}}</th>
+      <td>{{this.name}}</td>
+      <td>
+        <img width="50px" height="80px" src="{{this.imageId}}" alt="">
+      </td>
+      <td>{{this.mass}}</td>
+      <td>{{this.country}}</td>
+      <td>{{this.price}}</td>
+      <td>
+        <button type="button" class="btn btn-detail-bg ">
+          <a href="admin/detail/{{this._id}}" class="btn-detial-text">Chi tiết</a>
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-primary">
+          <a href="/admin/{{this._id}}/updateForm" class="btn-detial-text">Sửa</a>
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger">
+          <a href="/admin/{{this._id}}" class="btn-detial-text">Xóa</a>
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "63dcbadf5f198ce2d8a847d6"
+  },
+  "name": "Espresso",
+  "description": "Là loại cafe rất được ưa chuộng tại Ý và Tây Ban Nha; được pha bằng cách cho nước bị ép dưới áp suất cao chảy qua một lượng cafe được xay cực mịn. Kết quả sẽ cho ra 25 – 30ml thức uống với 1 lớp kem từ dầu cà phê có màu vàng nâu sẫm (người ta gọi đó là crema) dày 5mm trên bề mặt. Một ly Espresso chính hiệu sẽ có vị rất đậm và trên mặt có một lớp crema thơm mà không đắng. \nCafe Espresso thường được uống bằng tách dày được làm nóng trước, có thể có hoặc không pha thêm đường và thường được phục vụ kèm theo 1 mẩu bánh quy cùng 1 ly nước.",
+  "mass": 250,
+  "price": 250,
+  "imageId": "espresso.jpg"
+},{
+  "_id": {
+    "$oid": "63dcbb7c5f198ce2d8a847d7"
+  },
+  "name": "Cappuccino",
+  "description": "Cũng có xuất xứ từ Ý, một Cappuccino chuẩn sẽ gồm 3 phần đều nhau, đó là: cafe Espresso được pha với một lượng nước gấp đôi (Espresso Lungo), sữa nóng và sữa sủi bọt. Tiếp đến, rắc thêm lên trên ít bột cacao hay bột quế, rồi dùng khuông, thìa hay tăm que khuấy/vẽ để tạo hình cho sản phẩm của mình, có thể là hình trái tim, hình chiếc lá, đám mây,…vô cùng bắt mắt.",
+  "mass": 250,
+  "price": 350,
+  "imageId": "cappuccino.jpg"
+},{
+  "_id": {
+    "$oid": "63dcbb7e5f198ce2d8a847d8"
+  },
+  "name": "Latte",
+  "description": "Cafe Latte hiểu đơn giản là cà phê và sữa. Với những người uống không sành thì rất dễ nhầm lẫn Cafe Latte với Cappuchino vì 2 loại này đều cùng chung 3 thành phần chính. Tuy nhiên, điểm khác nhau ở chỗ, khi pha Cafe Latte, người ta chỉ cho lượng bọt sữa bằng một nửa lượng sữa nóng; thay vì cho bằng nhau như pha Cappuchino. Một Espresso được pha chế với sữa và bột sữa trong ly hoặc tách 200ml với nhiệt độ 600 rồi cho 0,5 – 1cm bột sữa lên bề mặt.",
+  "mass": 250,
+  "price": 150,
+  "imageId": "latte.jpg"
+},{
+  "_id": {
+    "$oid": "63dcbb815f198ce2d8a847d9"
+  },
+  "name": "Americano",
+  "description": "Thực tế, Americano chính là Espresso nhưng được pha loãng với lượng nước gấp đôi. Một Espresso được pha trực tiếp với nước nóng đựng sẵn trong tách Cappuchino là có thể phục vụ ngay cho khách hàng; hoặc có thể phục vụ riêng với nước sôi bên ngoài.",
+  "mass": 250,
+  "price": 200,
+  "imageId": "americano.jpg"
+}]

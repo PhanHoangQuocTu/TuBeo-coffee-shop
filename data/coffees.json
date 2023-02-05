@@ -1,0 +1,253 @@
+[{
+  "_id": {
+    "$oid": "63de5cc237535c4350ec083d"
+  },
+  "name": "BELLA ESPRESSO",
+  "description": "Có hương thơm đầm, thơm rất lâu với hậu vị đậm và êm, là một sự cân bằng hoàn hảo giữa hương và vị.",
+  "mass": 250,
+  "price": 199,
+  "country": "Từ những hạt cà phê Arabica, Robusta, Excelsa.",
+  "imageId": "img/coffee/34a63d709eb4489bac816497aa039fee",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675517122492"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675517122492"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de5cfb37535c4350ec0840"
+  },
+  "name": "EL SALVADOR MENENDEZ",
+  "description": "Có hương thơm đầm, thơm rất lâu với hậu vị đậm và êm. Là một sự cân bằng hoàn hảo giữa hương và vị.",
+  "mass": 150,
+  "price": 299,
+  "country": "Từ những hạt cà phê Arabica, Robusta, Excelsa.",
+  "imageId": "img/coffee/89cb75cb2f51c699f76ca9ebc85f0629",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675517179275"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675517179275"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de5d8137535c4350ec0846"
+  },
+  "name": "COLOMBIA DECAF",
+  "description": "LEGEND là cà phê chồn được sản xuất bằng phương pháp \"Lên men sinh học\", sản phẩm chỉ có duy nhất ở Trung Nguyên.",
+  "mass": 250,
+  "price": 399,
+  "country": "Colombia",
+  "imageId": "img/coffee/df4ab3592b9be7a6047d15382c546d47",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675517313316"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675517313316"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de5e2537535c4350ec0849"
+  },
+  "name": "CARAVAN BREW",
+  "description": "Từ nơi Đại ngàn Tây Nguyên hùng vĩ – “Vùng đất đỏ bazan huyền thoại, có lịch sử hình thành hơn 160 triệu năm trước”. Câu chuyện Cà phê Chồn bắt đầu với loại chồn hương hoang dã, sống trong những cánh rừng cà phê bạt ngàn… Những “nghệ nhân” này sau khi ăn những trái cà phê chín mọng đã cho ra đời loại cà phê nguyên liệu độc nhất để tạo nên Cà phê WEASEL “vô cùng quý hiếm và đắt nhất thế giới” đến từ Trung Nguyên, với sản lượng hết sức khiêm tốn, chỉ khoảng 40 – 50kg mỗi năm.  Học ở thiên nhiên. Các chuyên gia Trung Nguyên đã dày công nghiên cứu tìm tòi và bằng phương pháp “lên men sinh học” đã tái tạo thành công quy trình ấp ủ cà phê thật sự diễn ra trong cơ thể Chồn Hương hoang dã nhằm tạo nên loại cà phê nguyên liệu đặc biệt cho sự ra đời của “Tuyệt Phẩm Cà Phê LEGEND”.  Cà phê là “Báu vật của tự nhiên” là “món quà của Thượng đế”. Với cái vị đắng và hương thơm “khó chối từ” ấy, kể từ khi được phát hiện và phổ biến đã như “người bạn tri kỷ” của biết bao anh hùng, vĩ nhân trong tiến trình “tạo nên lịch sử” của nhân loại.  Ra đời trọn vẹn trong ý niệm ấy “Tuyệt phẩm Cà Phê LEGEND” là sự giao thao giữa “trời, đất và lòng đam mê của con người” từ “vùng đất Tây Nguyên huyền thoại” dâng lên người yêu cà phê cái “hương vị diệu kỳ đặc sắc” giúp khơi gợi nguồn cảm hứng bắt tận, những giây phút sáng tạo xuất thần, sự tinh thức cao độ để tạo nên những bước ngoặc lịch sử cho chính mình và cho xã hội.  Chính vì những phảm chất ưu việt đó, cà phê LEGEND là loại cà phê duy nhất được chọn phục vụ cho các Hội nghị toàn cầu như ASEM, APEC, WEF, ODA...và làm quà tặng đặc biệt cho các nguyên thủ, các Quốc Vương cũng như các nhà ngoại giao khắp thế giới.  Chọn đúng cà phê, thưởng thức đúng cách thì sẽ chẳng khó khăn nào thách thức được bạn bởi quyền năng sáng tạo vô biên từ chinh ly cà phê ấy sẽ luôn giúp chúng ta có được những “giây phút xuất thần” để khám phá sức mạnh vĩ đại tiềm ẩn và viết nên trang sử của chính mình.",
+  "mass": 250,
+  "price": 249,
+  "country": "Vùng đất đỏ bazan",
+  "imageId": "img/coffee/fd33a9ae2cf2ae82c56dc4e1657a71bd",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675517477926"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675517477926"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de5ef437535c4350ec084e"
+  },
+  "name": "BUENA VISTA",
+  "description": "Cà phê Chế Phin của Trung Nguyên đặc chế để mang lại những tách cà phê tuyệt hảo và những ý tưởng sáng tạo đột phá để thay đổi đời người. Được chế biến từ những hạt cà phê Culi Robusta ngon nhất của vùng đất Thánh địa cà phê Buôn Ma Thuột cùng những công nghệ hiện đại nhất thế giới và bí quyết riêng không thể sao chép, Chế Phin Số 1 mang hương thơm dịu lưu luyến, vị đậm đà mân mê vị giác chuyên dành cho những người sành cà phê và các quán cà phê muốn sở hữu gu cà phê riêng biệt. Đặc biệt, phối trộn các loại Chế Phin theo công thức và hướng dẫn đặc biệt từ các chuyên gia cà phê Trung Nguyên còn có thể giúp tạo ra gu uống cà phê riêng, mang hương vị đặc trưng chỉ có ở quán bạn. Sản phẩm chuyên cho kênh quán, thích hợp với nhiều cách pha chế khác nhau.",
+  "mass": 250,
+  "price": 80,
+  "country": "Buôn Ma Thuột",
+  "imageId": "img/coffee/5a725c2f83943f86ed5c076aa561ea3c",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675517684698"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675517684698"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de5f2437535c4350ec0851"
+  },
+  "name": "BRAZIL FORTALEZA",
+  "description": "Những hạt cà phê Culi Rubusta được chọn lọc một cách kỹ lưỡng, cùng với bí quyết Đông Phương, công thức không thể sao chép, sản xuất trên công nghệ hàng đầu thế giới, Trung Nguyên đã mang đến cho những người yêu thích cà phê dòng Cà phê sáng tạo 1 chất lượng nhất.  Với Trung Nguyên, cà phê không chỉ là ngon mà nó còn phải đem lại một năng lượng tràn đầy cho sự sáng tạo của não. Vì lịch sử đã chứng minh, có những ý tưởng điên rồ, không tưởng đã làm thay đổi hoàn toàn thế giới, và nó được khơi lên từ cà phê. Những ý tưởng sáng tạo tiếp theo tại sao không thể bắt đầu từ chính bạn? Bởi sáng tạo là giá trị và sức mạnh vĩ đại tiềm ẩn bên trong mỗi chúng ta.  Thật tuyệt vời khi bắt đầu ngày mới bằng một ly cà phê có thể khơi lên cảm hứng và những cảm xúc rất mới mẻ trong bạn.",
+  "mass": 150,
+  "price": 399,
+  "country": "Brazil",
+  "imageId": "img/coffee/2dea60e40c0c8d0036c9e1f6bccf15f6",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675517732531"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675517732531"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de5f6937535c4350ec0854"
+  },
+  "name": "BOURDON JUNGLE BREW",
+  "description": "được chiết xuất từ những phần tinh túy nhất có trong từng hạt cà phê, trên công nghệ hàng đầu và bí quyết không thể sao chép để cho ra đời sản phẩm cà phê hòa tan thượng hạng, với hương vị khác biệt, đậm đà, hương thơm độc đáo quyến rũ mà không một sản phẩm cà phê hòa tan nào khác đạt được.",
+  "mass": 250,
+  "price": 199,
+  "country": "Amazon",
+  "imageId": "img/coffee/6c6a2ac0a4ec008657e413b93e176ec6",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675517801585"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675517801585"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de5fb037535c4350ec0857"
+  },
+  "name": "ESPERANZA BREW",
+  "description": "Là loại café hạt hơi dài, được trồng ở độ cao trên 600m, khí hậu mát mẻ, được trồng chủ yếu ở Braxin, và chiếm tới 2/3 lượng café hiện nay trên thế giới.Cách chế biến mới là điểm tạo ra sự khác biệt giữa Arabica va Robusta. Quả Arabica được thu hoạch, rồi lên men (ngâm nước cho nở…) rồi rửa sạch rồi sấy. Chính vì thế, vị của Arabica hơi chua, và đây cũng được coi là 1 đặc điểm cảm quan của loại café này. Vì thế, nói đến “hậu vị” của café là có thật, nhưng không phải là vị chua, mà phải chuyển từ chua sang đắng (kiểu socola ý, sau khi nuốt mới là café ngon). Người ta thường ví vị chua đó giống như khi mình ăn chanh, sẽ thấy rất chua, nhưng lập tức thấy được vị đắng của vỏ. Cách cảm nhận vị chua của café cũng như vậy.",
+  "mass": 250,
+  "price": 399,
+  "country": "Brazin",
+  "imageId": "img/coffee/0f218cf8099ca308aeb23a8105b70497",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675517872910"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675517872910"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de5ff437535c4350ec085a"
+  },
+  "name": "ETHIOPIA GUJI",
+  "description": "Mấu chốt là sự biến hóa kỳ diệu của hạt cà phê trong dạ dày chồn. Khi ăn quả, chồn nhả vỏ mềm khó tiêu bên ngoài, nuốt phần thịt và hạt cà phê. Ngày ấy, cà phê còn rất quý hiếm nên nông phu bị cấm sử dụng cà phê thu hoạch được. Họ phải nhặt những hạt cà phê trong phân của con chồn (còn gọi là cầy vòi đốm Paradoxurus hermaphroditus) mà các ông chủ người Pháp cho là đồ phế thải, bẩn thỉu, để chế biến thành loại cà phê bí mật của mình.",
+  "mass": 250,
+  "price": 199,
+  "country": "Đà lạt",
+  "imageId": "img/coffee/ca766424e6f2f065e7adc2eea33955f8",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675517940754"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675517940754"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de603537535c4350ec085d"
+  },
+  "name": "ETHIOPIA WELENA",
+  "description": "Cafe take way, hay nói đúng hơn là cafe được pha bằng máy, là một loại cafe được du nhập từ nước ngoài với những quán cafe nước ngoài đầu tiên như Coffee Bean and Tea Leaf,  Angel in US hoặc ông lớn về cà phê hiện nay đó là Starbucks, cũng như các tên tuổi coffee shop Việt Nam đình đám hiện nay đó là: Urban Station, Passio bạn có thể thấy họ khắp thành phố hồ chí minh. Những loại đồ uống ở bên trong đòi hỏi nhiều hơn về kĩ năng pha chế, không như cà phê phin truyền thống tồn tại ở Việt Nam. Chính vì thế các nhân viên pha chế hay gọi tắt là các barista đang được coi trọng. Nhưng Latte mới là món đồ uống chứng tỏ đẳng cấp của các barista. Vậy Latte là gì, mà nó to lớn đến vậy, nó tinh tế đến mức nhiều cuộc thi về latte art đang được tổ chức ở khắp các châu Lục.   Khi bạn mở ra một quán cafe, sẽ có nhiều đối thủ cạnh tranh đến xem đồ uống bạn thế nào, nếu bạn làm ngon thì sẽ một áp lực lớn đối với họ, nhưng cũng sẽ có nhiều vị khách hay người sành về cafe đến xem đẳng cấp quán của bạn cỡ nào, việc họ làm đầu tiên sẽ uống thử cafe của bạn, sau đó order một ly Latte.",
+  "mass": 250,
+  "price": 199,
+  "country": "Đà Lạt",
+  "imageId": "img/coffee/f9d92356eff09d994190a35e8ff3e952",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675518005102"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675518005102"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de607837535c4350ec0860"
+  },
+  "name": "FIKA BREW",
+  "description": "Để có một ly Espresso hoàn hảo, luôn bắt đầu bằng các hạt cà phê chất lượng cao nhất được rang hơi sẩm màu (rang đậm). Qua cách pha dưới áp suất, axít tự nhiên của hạt cà phê bị hòa tan nhanh hơn các phương pháp pha chế thông thường rất nhiều điều này sẽ làm cho ly cà phê có vị chua khó chịu. Để giảm bớt vị chua khó chịu này người ta sẽ rang hạt cà phê lâu hơn, do hàm lượng axít giảm đi khi rang hạt cà phê.  Thường loại cà phê Arabica (Coffea arabica) có chất lượng cao được dùng làm cà phê espresso. Để cà phê espresso có crema nhiều và đặc hơn người ta pha trộn hạt cà phê Arabia với Robusta (Coffea canephora), loại này không có được hương thơm và vị đậm đà như Arabica. Những người trong giới sành điệu vẫn cãi nhau sôi nổi là 100% Arabica hay phương thức pha trộn 60% Arabica và 40% Robusta sẽ mang lại một ly cà phê espresso hoàn hảo.",
+  "mass": 250,
+  "price": 399,
+  "country": "Italia",
+  "imageId": "img/coffee/b59129d90ea08245652d9f6e3cbe97c9",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675518072686"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675518072686"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de60a037535c4350ec0863"
+  },
+  "name": "FLO ESPRESSO",
+  "description": "Để có một ly Espresso hoàn hảo, luôn bắt đầu bằng các hạt cà phê chất lượng cao nhất được rang hơi sẩm màu (rang đậm). Qua cách pha dưới áp suất, axít tự nhiên của hạt cà phê bị hòa tan nhanh hơn các phương pháp pha chế thông thường rất nhiều điều này sẽ làm cho ly cà phê có vị chua khó chịu. Để giảm bớt vị chua khó chịu này người ta sẽ rang hạt cà phê lâu hơn, do hàm lượng axít giảm đi khi rang hạt cà phê.  Thường loại cà phê Arabica (Coffea arabica) có chất lượng cao được dùng làm cà phê espresso. Để cà phê espresso có crema nhiều và đặc hơn người ta pha trộn hạt cà phê Arabia với Robusta (Coffea canephora), loại này không có được hương thơm và vị đậm đà như Arabica. Những người trong giới sành điệu vẫn cãi nhau sôi nổi là 100% Arabica hay phương thức pha trộn 60% Arabica và 40% Robusta sẽ mang lại một ly cà phê espresso hoàn hảo.",
+  "mass": 250,
+  "price": 399,
+  "country": "Italia",
+  "imageId": "img/coffee/01529e91d49ed2f7a95b31d46fd883ef",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675518112623"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675518112623"
+    }
+  },
+  "__v": 0
+}]
