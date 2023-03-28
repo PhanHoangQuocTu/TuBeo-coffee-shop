@@ -9,7 +9,7 @@ const app = express()
 const port = 3000
 
 
-const db = require('./config/db/index')
+const db = require('./src/config/db/index')
 db.connect();
 
 
@@ -35,7 +35,7 @@ app.engine('hbs', engine({
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources' ,'views'));
 
-const route = require('./routes/')
+const route = require('./src/routes')
 
 //overide http/ method =put, delete, ...
 app.use(methodOverride('_method'))
