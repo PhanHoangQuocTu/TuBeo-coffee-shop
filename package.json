@@ -4,7 +4,7 @@
   "description": "restaurant nodejs by tutu",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:client && npm run build:server",
