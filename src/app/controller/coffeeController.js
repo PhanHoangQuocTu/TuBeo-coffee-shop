@@ -7,6 +7,7 @@ class coffeeController {
         coffee.find({_id: req.params.id})
             .then(coffee => {
                 res.render('coffee/detail',{
+                    showHeaderFooter: true,
                     coffee: multipleMongooseToObject(coffee)
                 })
             })

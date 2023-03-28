@@ -2,6 +2,8 @@ const express = require('express')
 const { engine } = require('express-handlebars');
 const path = require('path');
 const methodOverride = require('method-override')
+var bodyParser = require('body-parser')
+
 
 const app = express()
 const port = 3000
@@ -22,7 +24,7 @@ app.use(
   }),
 );
 app.use(express.json());
-
+app.use(bodyParser.json())
 
 app.engine('hbs', engine({
   extname: '.hbs',

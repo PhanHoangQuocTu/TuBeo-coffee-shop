@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 async function connect(){
     try{
-        await mongoose.connect('mongodb+srv://tuadmin:tuadmin@cluster0.7rlqhcw.mongodb.net/?retryWrites=true&w=majority')
+        await mongoose.connect('mongodb://127.0.0.1:27017/TB_Coffee')
         console.log('connect to database success !!!')
     }
     catch{

@@ -5,12 +5,13 @@
       <li class="breadcrumb-item active" aria-current="page">Admin</li>
     </ol>
   </nav>
-  <div class="ml-4 mt-4">
-    <h1>Danh sách Sản phẩm</h1>
-    <a href="/admin/trash">Thùng rác { {{deletedCount}} }</a>
-  </div>
-  <div class="mt-4 ml-4 mb-4 d-flex align-items-center">
+  <div class="mt-4 ml-4 mb-4">
+      <a href="/admin">Danh sách sản phẩm</a>
+      <h1>Sản phẩm đã xóa</h1>
+    </div>
 
+  <div class="mt-4 ml-4 mb-4 d-flex align-items-center">
+    
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="checkbox-all">
       <label class="form-check-label" for="checkbox-all">
@@ -19,26 +20,20 @@
     </div>
     <select class="form-control form-control-sm checkbox-select-all-options" id="" name="action" required>
       <option value="">--Chọn chức năng --</option>
-      <option value="delete">Xóa</option>
+      <option value="restore">Khôi phục</option>
     </select>
     <button class="btn btn-primary btn-sm btn-check-all-submit disabled">Thực hiện</button>
-    <div class="p-4">
-      <button type="button" class="btn btn-primary">
-        <a href="/admin/createForm" class="text-light btn-text">Thêm sản phẩm</a>
-      </button>
-    </div>
   </div>
+
   <table class="table">
     <thead>
       <tr>
         <th scope="col"></th>
         <th scope="col">STT</th>
         <th scope="col">Tên</th>
-        <th scope="col">Hình ảnh</th>
         <th scope="col">Khối lượng</th>
         <th scope="col">Xuất sứ</th>
         <th scope="col">Giá</th>
-        <th scope="col"></th>
         <th scope="col"></th>
         <th scope="col"></th>
       </tr>
@@ -53,40 +48,32 @@
         </td>
         <th scope="row">{{sum @index 1}}</th>
         <td>{{this.name}}</td>
-        <td>
-          <img width="50px" height="80px" src="{{this.imageId}}" alt="">
-        </td>
         <td>{{this.mass}}</td>
         <td>{{this.country}}</td>
         <td>{{this.price}}</td>
         <td>
-          <button type="button" class="btn btn-detail-bg ">
-            <a href="admin/detail/{{this._id}}" class="btn-detail-text">Chi tiết</a>
-          </button>
-        </td>
-        <td>
           <button type="button" class="btn btn-primary">
-            <a href="/admin/{{this._id}}/updateForm" class="btn-detail-text">Sửa</a>
+            <a href="" class="btn-detail-text btn-restore" data-id="{{this._id}}">Khôi phục</a>
           </button>
         </td>
         <td>
           <button type="button" class="btn btn-danger">
-            <a href="" class="text-light btn-text" data-toggle="modal" data-target="#delete-coffee-modal"
-              data-id="{{this._id}}">Xóa</a>
+            <a href="" class="btn-text" data-toggle="modal" data-target="#delete-info" data-id="{{this._id}}">Xóa vĩnh
+              viễn</a>
           </button>
         </td>
       </tr>
       {{else}}
       <tr>
-        <td>Không có sản phẩm nào. <a href="/admin/createForm">Hãy thêm sản phẩm</a></td>
+        <td>Danh sách trống.</td>
       </tr>
       {{/each}}
     </tbody>
   </table>
 </form>
 
-
-<div class="modal fade" id="delete-coffee-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+{{!-- Confirm modal --}}
+<div class="modal fade" id="delete-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -97,39 +84,55 @@
         </button>
       </div>
       <div class="modal-body">
-        Bạn có muốn xóa sản phẩm này không ?
+        Việc xóa thông tin này không thể khôi phục. Bạn vẫn muốn xóa dữ liệu này ?
       </div>
       <div class="modal-footer">
-        <button id="btn-delete-coffee" type="button" class="btn btn-danger">Xóa</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+        <button type="button" id="btn-delete-info" class="btn btn-danger">Xóa vĩnh viễn</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
       </div>
     </div>
   </div>
 </div>
 
-<form name="delete-form" method="POST"></form>
 
+<form name="delete-form" method="POST"></form>
+<form name="restore-form" method="POST"></form>
+
+
+{{!-- Javascript get id to delete --}}
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var coffeeId;
+    var infoId;
+    var btnDeleteInfo = document.getElementById('btn-delete-info')
     var deleteForm = document.forms['delete-form']
+    var restoreForm = document.forms['restore-form']
+    var restoreBtn = $('.btn-restore')
+    var coffeeId;
     var containerForm = document.forms['container-form']
     var btnDeleteCoffee = document.getElementById('btn-delete-coffee')
     var checkboxAll = $('#checkbox-all')
     var coffeeItemCheckbox = $('input[name="coffeeIds[]"]');
     var checkedAllSubmitBtn = $('.btn-check-all-submit')
-
-
-    $('#delete-coffee-modal').on('show.bs.modal', function (event) {
+    //When dialog confirm clicked
+    $('#delete-info').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget)
-      coffeeId = button.data('id')
+      infoId = button.data('id')
+
     })
 
-    btnDeleteCoffee.onclick = function () {
-      deleteForm.action = '/admin/' + coffeeId + '?_method=DELETE';
+    btnDeleteInfo.onclick = function () {
+      deleteForm.action = '/admin/' + infoId + '/force?_method=DELETE'
       deleteForm.submit();
     }
 
+    //Restored btn click
+    restoreBtn.click(function (event) {
+      event.preventDefault();
+
+      var coffeeId = $(this).data('id')
+      restoreForm.action = '/admin/' + coffeeId + '/restore?_method=PATCH'
+      restoreForm.submit();
+    })
 
     checkboxAll.change(function () {
       var isCheckedAll = $(this).prop('checked');
@@ -160,4 +163,6 @@
       }
     }
   })
+
+
 </script>

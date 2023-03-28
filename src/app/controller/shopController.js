@@ -7,6 +7,7 @@ class shopController {
         coffee.find({})
             .then(coffee => {
                 res.render('shop',{
+                    showHeaderFooter: true,
                     coffee: multipleMongooseToObject(coffee)
                 })
             })

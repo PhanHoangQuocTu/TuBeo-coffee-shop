@@ -8,6 +8,7 @@ class homeController {
         coffeeBest.find({})
             .then(coffee => {
                 res.render('home', {
+                    showHeaderFooter: true,
                     coffee: multipleMongooseToObject(coffee)
                 })
             })
@@ -15,34 +16,17 @@ class homeController {
     }
 
     introduce(req, res, next) {
-        res.render('introduce')
+        res.render('introduce', {showHeaderFooter: true,})
     }
 
     detail(req, res, next) {
         coffeeBest.find({ _id: req.params.id })
             .then((coffee) => {
-                res.render('detail', { coffee: multipleMongooseToObject(coffee) })
+                res.render('detail', {
+                    showHeaderFooter: true,
+                    coffee: multipleMongooseToObject(coffee) })
             })
             .catch(next)
-    }
-
-    login(req, res, next) {
-        var tk = req.body.account
-        var pass = req.body.password
-        var obj = {}
-        accounts.find({ account: tk })
-            .then(account => {
-                obj = account;
-                console.log(typeof account.account)
-                console.log(typeof tk)
-                console.log(account.account === tk)
-                if (account.account === tk) {
-                    res.redirect('home')
-                }
-                else {
-
-                }
-            })
     }
 }
 
