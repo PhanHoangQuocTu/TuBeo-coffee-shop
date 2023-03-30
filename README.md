@@ -14,9 +14,9 @@
 - Others: Bootstrap
 
 ### Cách cài đặt và sử dụng
-- Clone web từ github và gõ "npm install" để cài đặt những thư viện cần thiết của dự án
-- Thay đổi đường dẫn database trong thư mục "config"
-- Sau khi cài đặt hoàn tất những thư viện cần thiết, gõ "npm start" để chạy chương trình
+- Clone project từ github và gõ "npm install" vào terminal để cài đặt những thư viện cần thiết của dự án
+- Thay đổi đường dẫn database trong thư mục "config", và thêm dữ liệu có sẵn từ thư mục "data"
+- Sau khi cài đặt hoàn tất những thư viện cần thiết và database, gõ "npm start" vào terminal để chạy chương trình
 - Truy cập đường dẫn : "http://localhost:3000/" để truy cập vào trang chính của dự án
 
 ### Liên hệ
