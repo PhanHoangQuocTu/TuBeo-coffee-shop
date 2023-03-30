@@ -7,10 +7,19 @@
 - CRUD sản phẩm
 - Login
 
-### Tech
+### Công nghệ
 - Front end: Handlebars (HTML, CSS)
 - Back end: NodeJS, ExpressJS
 - Database: MongoDB
 - Others: Bootstrap
+
+### Cách cài đặt và sử dụng
+- Clone web từ github và gõ "npm install" để cài đặt những thư viện cần thiết của dự án
+- Thay đổi đường dẫn database trong thư mục "config"
+- Sau khi cài đặt hoàn tất những thư viện cần thiết, gõ "npm start" để chạy chương trình
+- Truy cập đường dẫn : "http://localhost:3000/" để truy cập vào trang chính của dự án
+
+### Liên hệ
+- Gmail: tuphan694@gmail.com
 
 
