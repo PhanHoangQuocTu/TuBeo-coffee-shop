@@ -6,10 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm build",
-    "build:client": "cd client && npm install && npm run build",
-    "build:server": "cd server && npm install && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "tutu",
   "license": "ISC",
