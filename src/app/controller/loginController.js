@@ -1,13 +1,13 @@
 const account = require('../models/Account')
 const coffee = require('../models/Coffee')
-const { mongooseToObject, multipleMongooseToObject } = require('../../util/mongoose')
+const { multipleMongooseToObject } = require('../../util/mongoose')
 
 class loginCotroller {
-    index(req, res, next) {
+    index(req, res) {
         res.render('login')
     }
 
-    login(req, res, next) {
+    login(req, res) {
         var username = req.body.username;
         var password = req.body.password;
         //res.json(req.body)
@@ -25,7 +25,6 @@ class loginCotroller {
                         })
                     }
 
-
                     Promise.all([coffeeQuery, coffee.countDocumentsDeleted()])
                         .then(([coffee, deletedCount]) =>
                             res.render('admin/home', {
@@ -40,14 +39,14 @@ class loginCotroller {
                 }
             })
             .then(data => {
-                
+
             })
             .catch(err => {
                 res.status(500).json('error')
             })
     }
 
-    register(req, res, next) {
+    register(req, res) {
         var username = req.body.username;
         var password = req.body.password;
 
@@ -71,8 +70,6 @@ class loginCotroller {
             .catch(err => {
                 res.status(500).json('error')
             })
-
-        // res.render('login')
     }
 }
 

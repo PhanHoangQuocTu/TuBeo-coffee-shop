@@ -1,9 +1,7 @@
-const coffee = require('../models/Coffee')
 const coffeeBest = require('../models/coffeeBest')
-const { mongooseToObject, multipleMongooseToObject } = require('../../util/mongoose')
+const { multipleMongooseToObject } = require('../../util/mongoose')
 
 class homeController {
-    
     index(req, res, next) {
         coffeeBest.find({})
             .then(coffee => {
@@ -16,7 +14,7 @@ class homeController {
     }
 
     introduce(req, res, next) {
-        res.render('introduce', {showHeaderFooter: true,})
+        res.render('introduce', { showHeaderFooter: true, })
     }
 
     detail(req, res, next) {
@@ -24,7 +22,8 @@ class homeController {
             .then((coffee) => {
                 res.render('detail', {
                     showHeaderFooter: true,
-                    coffee: multipleMongooseToObject(coffee) })
+                    coffee: multipleMongooseToObject(coffee)
+                })
             })
             .catch(next)
     }

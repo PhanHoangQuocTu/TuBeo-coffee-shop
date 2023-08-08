@@ -1,9 +1,8 @@
 const coffee = require('../models/Coffee')
-const coffeeBest = require('../models/coffeeBest')
-const { mongooseToObject, multipleMongooseToObject } = require('../../util/mongoose')
+const { multipleMongooseToObject } = require('../../util/mongoose')
 
 class coffeeController {
-    detail(req, res, next) {
+    detail(req, res) {
         coffee.find({_id: req.params.id})
             .then(coffee => {
                 res.render('coffee/detail',{

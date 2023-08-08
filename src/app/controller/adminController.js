@@ -3,7 +3,7 @@ const coffee = require('../models/Coffee')
 const { mongooseToObject, multipleMongooseToObject } = require('../../util/mongoose')
 
 class adminController {
-    index(req, res, next) {
+    index(res, next) {
         coffee.find({})
             .then(coffee => {
                 res.render('admin/home', {
@@ -13,11 +13,11 @@ class adminController {
             })
             .catch(next)
     }
-    createForm(req, res, next) {
-        res.render('admin/create', {showHeaderFooter: true,})
+    createForm(req, res) {
+        res.render('admin/create', { showHeaderFooter: true, })
     }
 
-    detail(req, res, next) {
+    detail(req, res) {
         coffee.find({ _id: req.params.id })
             .then(coffee => {
                 res.render('admin/detail', {
@@ -101,7 +101,7 @@ class adminController {
             .catch(next)
     }
 
-    show(req, res, next) {
+    show(req, res) {
         let coffeeQuery = coffee.find({});
 
         if (req.query.hasOwnProperty('_sort')) {
@@ -109,7 +109,6 @@ class adminController {
                 [req.query.column]: req.query.type
             })
         }
-
 
         Promise.all([coffeeQuery, coffee.countDocumentsDeleted()])
             .then(([coffee, deletedCount]) =>
