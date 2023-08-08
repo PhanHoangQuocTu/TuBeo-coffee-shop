@@ -33,7 +33,7 @@ class adminController {
         formData.imageId = imagePath;
         const newCoffee = new coffee(formData);
         newCoffee.save()
-            .then(() => res.redirect('/shop'))
+            .then(() => res.redirect('/admin'))
             .catch(next)
     }
 
@@ -57,13 +57,13 @@ class adminController {
 
     delete(req, res, next) {
         coffee.delete({ _id: req.params.id })
-            .then(() => res.redirect('back'))
+            .then(() => res.redirect('/admin'))
             .catch(next)
     }
 
     forceDelete(req, res, next) {
         coffee.deleteOne({ _id: req.params.id })
-            .then(() => res.redirect('back'))
+            .then(() => res.redirect('/admin'))
             .catch(next)
     }
 
@@ -71,13 +71,13 @@ class adminController {
         switch (req.body.action) {
             case 'delete': {
                 coffee.delete({ _id: { $in: req.body.coffeeIds } })
-                    .then(() => res.redirect('back'))
+                    .then(() => res.redirect('/admin'))
                     .catch(next)
                 break;
             }
             case 'restore': {
                 coffee.restore({ _id: { $in: req.body.coffeeIds } })
-                    .then(() => res.redirect('back'))
+                    .then(() => res.redirect('/admin'))
                     .catch(next)
                 break;
             }
