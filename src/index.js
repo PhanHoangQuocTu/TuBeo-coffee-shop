@@ -4,14 +4,11 @@ const path = require('path');
 const methodOverride = require('method-override')
 var bodyParser = require('body-parser')
 
-
 const app = express()
-const port = 3000
-
+const port = process.env.PORT || 3000;
 
 const db = require('./config/db/index')
 db.connect();
-
 
 app.use('/', express.static(path.join(__dirname, 'lib')))
 //static file => css, img
