@@ -1,4 +1,4 @@
-const coffeeBest = require('../models/coffeeBest')
+const coffeeBest = require('../models/CoffeeBest.js')
 const { multipleMongooseToObject } = require('../../util/mongoose')
 
 class homeController {
