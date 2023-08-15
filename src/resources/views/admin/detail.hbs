@@ -1,28 +1,31 @@
-<div class="container bootdey">
-    <div class="col-md-12">
+<div class="container bootdey p-0">
+    <div class="col-md-12 p-0">
         <section class="panel">
             {{#each coffee}}
-            <div class="panel-body d-flex flex-row">
-                <div class="col-md-6">
-                    <div class="pro-img-details">
-                        <img width="50%" height="500px" src="/{{this.imageId}}" alt="">
-                    </div>
+            <div class="panel-body d-flex flex-column">
+                <div class="pro-img-details">
+                    <img width="50%" height="500px" src="/{{this.imageId}}" alt="">
                 </div>
-                <div class="col-md-6">
+                <div>
                     <h4 class="pro-d-title">
                         <a href="#" class="">
                             {{this.name}}
                         </a>
                     </h4>
-                    <p>
+                    <p style="text-align: justify;">
                         {{this.description}}
                     </p>
-                    <div class="m-bot15"> <strong>Xuất sứ : </strong> <span class="pro-price"> {{this.country}}</span></div>
-                    <div class="m-bot15"> <strong>Price : </strong> <span class="pro-price"> {{this.price}}.00 đ</span></div>
-                    <p>
-                        <a href="/admin">
-                            <button class="btn btn-round btn-danger" type="button">Quay lại</button>
-                        </a>
+                    <div class="m-bot15">
+                        <strong>Xuất sứ : </strong>
+                        <span class="pro-price"> {{this.country}}</span>
+                    </div>
+                    <div class="m-bot15">
+                        <strong>Price : </strong>
+                        <span class="pro-price"> {{this.price}}.00 đ</span>
+                    </div>
+                    <a href="/admin">
+                        <button class="btn btn-round btn-danger" type="button">Quay lại</button>
+                    </a>
                 </div>
             </div>
             {{/each}}

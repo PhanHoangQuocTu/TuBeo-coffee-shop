@@ -6,14 +6,13 @@
     </ol>
   </nav>
   <div class="ml-4 mt-4">
-    <h1>Danh sách Sản phẩm</h1>
+    <h3>Danh sách Sản phẩm</h3>
     <a href="/admin/trash">Thùng rác { {{deletedCount}} }</a>
   </div>
-  <div class="mt-4 ml-4 mb-4 d-flex align-items-center">
-
+  <div class="mt-4 ml-4 mb-4 d-flex align-items-center flex-wrap">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="checkbox-all">
-      <label class="form-check-label" for="checkbox-all">
+      <input class="form-check-input" type="checkbox" value="" id="checkbox-all" />
+      <label class="form-check-label" for="checkbox-all" style="white-space: nowrap;">
         Chọn tất cả
       </label>
     </div>
@@ -21,70 +20,74 @@
       <option value="">--Chọn chức năng --</option>
       <option value="delete">Xóa</option>
     </select>
-    <button class="btn btn-primary btn-sm btn-check-all-submit disabled">Thực hiện</button>
+    <button class="btn btn-primary btn-sm btn-check-all-submit disabled">Thực
+      hiện</button>
     <div class="p-4">
       <button type="button" class="btn btn-primary">
         <a href="/admin/createForm" class="text-light btn-text">Thêm sản phẩm</a>
       </button>
     </div>
   </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col">STT</th>
-        <th scope="col">Tên</th>
-        <th scope="col">Hình ảnh</th>
-        <th scope="col">Khối lượng</th>
-        <th scope="col">Xuất sứ</th>
-        <th scope="col">Giá</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each coffee}}
-      <tr>
-        <td>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="coffeeIds[]" value="{{this._id}}">
-          </div>
-        </td>
-        <th scope="row">{{sum @index 1}}</th>
-        <td>{{this.name}}</td>
-        <td>
-          <img width="50px" height="80px" src="{{this.imageId}}" alt="">
-        </td>
-        <td>{{this.mass}}</td>
-        <td>{{this.country}}</td>
-        <td>{{this.price}}</td>
-        <td>
-          <button type="button" class="btn btn-detail-bg ">
-            <a href="admin/detail/{{this._id}}" class="btn-detail-text">Chi tiết</a>
-          </button>
-        </td>
-        <td>
-          <button type="button" class="btn btn-primary">
-            <a href="/admin/{{this._id}}/updateForm" class="btn-detail-text">Sửa</a>
-          </button>
-        </td>
-        <td>
-          <button type="button" class="btn btn-danger">
-            <a href="" class="text-light btn-text" data-toggle="modal" data-target="#delete-coffee-modal"
-              data-id="{{this._id}}">Xóa</a>
-          </button>
-        </td>
-      </tr>
-      {{else}}
-      <tr>
-        <td>Không có sản phẩm nào. <a href="/admin/createForm">Hãy thêm sản phẩm</a></td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
+  <div style="max-width: 100%; overflow: auto;">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">STT</th>
+          <th scope="col">Tên</th>
+          <th scope="col" style="white-space: nowrap;">Hình ảnh</th>
+          <th scope="col" style="white-space: nowrap;">Khối lượng</th>
+          <th scope="col" style="white-space: nowrap;">Xuất sứ</th>
+          <th scope="col">Giá</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each coffee}}
+        <tr>
+          <td>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="coffeeIds[]" value="{{this._id}}" />
+            </div>
+          </td>
+          <th scope="row">{{sum @index 1}}</th>
+          <td style="white-space: nowrap;">{{this.name}}</td>
+          <td>
+            <img width="50px" height="80px" src="{{this.imageId}}" alt="" />
+          </td>
+          <td>{{this.mass}}</td>
+          <td style="min-width: 250px; max-width: 250px">{{this.country}}</td>
+          <td>{{this.price}}</td>
+          <td>
+            <button type="button" class="btn btn-detail-bg">
+              <a href="admin/detail/{{this._id}}" class="btn-detail-text">Chi tiết</a>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary">
+              <a href="/admin/{{this._id}}/updateForm" class="btn-detail-text">Sửa</a>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger">
+              <a href="" class="text-light btn-text" data-toggle="modal" data-target="#delete-coffee-modal"
+                data-id="{{this._id}}">Xóa</a>
+            </button>
+          </td>
+        </tr>
+        {{else}}
+        <tr>
+          <td>Không có sản phẩm nào.
+            <a href="/admin/createForm">Hãy thêm sản phẩm</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 </form>
-
 
 <div class="modal fade" id="delete-coffee-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
@@ -112,50 +115,37 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var coffeeId;
-    var deleteForm = document.forms['delete-form']
-    var containerForm = document.forms['container-form']
-    var btnDeleteCoffee = document.getElementById('btn-delete-coffee')
-    var checkboxAll = $('#checkbox-all')
+    var deleteForm = document.forms['delete-form'];
+    var containerForm = document.forms['container-form'];
+    var btnDeleteCoffee = document.getElementById('btn-delete-coffee');
+    var checkboxAll = $('#checkbox-all');
     var coffeeItemCheckbox = $('input[name="coffeeIds[]"]');
-    var checkedAllSubmitBtn = $('.btn-check-all-submit')
-
-
+    var checkedAllSubmitBtn = $('.btn-check-all-submit');
     $('#delete-coffee-modal').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget)
-      coffeeId = button.data('id')
-    })
-
+      var button = $(event.relatedTarget);
+      coffeeId = button.data('id');
+    });
     btnDeleteCoffee.onclick = function () {
       deleteForm.action = '/admin/' + coffeeId + '?_method=DELETE';
       deleteForm.submit();
-    }
-
-
+    };
     checkboxAll.change(function () {
       var isCheckedAll = $(this).prop('checked');
-      coffeeItemCheckbox.prop('checked', isCheckedAll)
-      renderCheckAllSubmitBtn()
-    })
-
+      coffeeItemCheckbox.prop('checked', isCheckedAll);
+      renderCheckAllSubmitBtn();
+    });
     coffeeItemCheckbox.change(function () {
       var isCheckedAll = coffeeItemCheckbox.length === $('input[name="coffeeIds[]"]:checked').length
-      checkboxAll.prop('checked', isCheckedAll)
-      renderCheckAllSubmitBtn()
-    })
-
+      checkboxAll.prop('checked', isCheckedAll);
+      renderCheckAllSubmitBtn();
+    });
     checkedAllSubmitBtn.on('submit', function (e) {
-      var isSubmitable = !$(this).hasClass('disabled')
-      if (!isSubmitable) {
-        e.preventDefault();
-      }
-    })
-
+      var isSubmitable = !$(this).hasClass('disabled');
+      if (!isSubmitable) { e.preventDefault(); };
+    });
     function renderCheckAllSubmitBtn() {
       var checkedCount = $('input[name="coffeeIds[]"]:checked').length
-      if (checkedCount > 0) {
-        checkedAllSubmitBtn.removeClass('disabled')
-      }
-      else {
+      if (checkedCount > 0) { checkedAllSubmitBtn.removeClass('disabled') } else {
         checkedAllSubmitBtn.addClass('disabled')
       }
     }
